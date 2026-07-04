@@ -1,26 +1,33 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'SolaimanLipi';
+  src: url(/fonts/SolaimanLipi.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SolaimanLipi';
+  src: url('/fonts/SolaimanLipi-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-bangla: 'SolaimanLipi', 'Noto Sans Bengali', sans-serif;
+  --color-primary: #0F6E56;
+  --color-primary-dark: #0a5040;
+  --color-accent: #BA7517;
+  --color-bg: #FAFAF8;
+  --color-text: #1a1a1a;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-bangla);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.8;
 }
