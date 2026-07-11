@@ -13,4 +13,11 @@ export const signUpSchema = z.object({
     }
 );
 
+export const signInSchema = z.object({
+    email: z.string().min(1, 'আপনার ইমেইল দিন').email('বৈধ ইমেইল অ্যাড্রেস দিন'),
+    password: z.string().min(1, 'আপনার পাসওয়ার্ড দিন'),
+
+});
+
 export type SignUpFormData = z.infer<typeof signUpSchema>;
+export type SignInFormData = z.infer<typeof signInSchema>;
